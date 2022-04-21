@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/get-chat-list', [ChatController::class , 'index']);
 
-Route::get('/get-user-messages', ChatController::class , 'show');
+Route::get('/get-user-messages', [ChatController::class , 'show']);
 
-Route::post('/send-messages', ChatController::class , 'send-messages');
+Route::post('/send-messages', [ChatController::class , 'send-messages']);
 
